@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Math Facts - Arithmetic</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="arithmetic.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col">
+      Minutes: <input style="text-align:center;" class="form-control" id="mf-minutes" value="2">
+    </div>
+    <div class="col">
+      Biggest Number: <input style="text-align:center;" class="form-control" id="mf-maxnumber" value="10">
+    </div>
+    <div class="col">
+      <button id='mf-start-button' type="button" class="btn btn-success">Start</button>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div id="mf-timer" class="col">
+      0:00
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col">
+      <table>
+        <tr>
+          <td>&nbsp;</td><td align="right" id="mf-number1">0</td>
+        </tr><tr>
+          <td id="mf-operation">+</td><td align="right" id="mf-number2">0</td>
+        </tr><tr>
+          <td>&nbsp;</td>
+          <td align="right">
+              <input style="text-align:right;" class="form-control" id="mf-answer" disabled>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div id="mf-stats" class="col">
+      Number Correct: 0
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="arithmetic-ui.js"></script>
+</body>
+</html>
