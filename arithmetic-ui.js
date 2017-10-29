@@ -35,9 +35,7 @@ function start() {
   document.getElementById('mf-answer').removeAttribute('disabled');
   fill_problem();
   document.getElementById('mf-answer').focus();
-  start_btn = document.getElementById('mf-start-button');
-  start_btn.classList.remove('btn-success');
-  start_btn.classList.add('btn-danger');
+  start_btn = document.getElementById('mf-startstop');
   start_btn.textContent = 'Stop';
   start_btn.setAttribute('running', true)
 
@@ -62,16 +60,15 @@ function stop() {
   document.getElementById('mf-minutes').removeAttribute('disabled');
   document.getElementById('mf-maxnumber').removeAttribute('disabled');
   document.getElementById('mf-answer').setAttribute('disabled', true);
-  start_btn = document.getElementById('mf-start-button');
-  start_btn.classList.remove('btn-danger');
-  start_btn.classList.add('btn-success');
+  start_btn = document.getElementById('mf-startstop');
   start_btn.textContent = 'Start';
   start_btn.removeAttribute('running');
   document.getElementById('mf-timer').innerHTML = '0:00';
 }
 
-function startstop() {
-  start_btn = document.getElementById('mf-start-button');
+function startstop(e) {
+  e.preventDefault();
+  start_btn = document.getElementById('mf-startstop');
   if (start_btn.getAttribute('running')) {
     stop();
   } else {
@@ -82,6 +79,6 @@ function startstop() {
 var answerBox = document.getElementById('mf-answer');
 answerBox.addEventListener('change', submitAnswer, false);
 
-start_el = document.getElementById('mf-start-button');
+start_el = document.getElementById('mf-startstop');
 start_el.addEventListener('click', startstop, false);
 

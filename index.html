@@ -1,58 +1,60 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Math Facts - Arithmetic</title>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Math Facts - Arithmetic</title>
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css'>
+  <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
   <script src="arithmetic.js"></script>
+  <style type="text/css" media="all">
+    td {border-bottom: 0px; }
+  </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col">
-      Minutes: <input style="text-align:center;" class="form-control" id="mf-minutes" value="2">
+
+<div style="padding-top:20px" class="container">
+  <div class="row">
+    <div class="three columns">
+      <h4>Minutes: <input size=1 style="text-align:center;" class="form-control" id="mf-minutes" value="2"></h4>
     </div>
-    <div class="col">
-      Biggest Number: <input style="text-align:center;" class="form-control" id="mf-maxnumber" value="10">
+    <div class="six columns">
+      <h4>Biggest Number: <input size=3 style="text-align:center;" class="form-control" id="mf-maxnumber" value="10"></h4>
     </div>
-    <div class="col">
-      <button id='mf-start-button' type="button" class="btn btn-success">Start</button>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div id="mf-timer" class="col">
-      0:00
+    <div class="three columns">
+      <a id="mf-startstop" href='' class='button button-primary'>Start</a>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div class="col">
+  <div class="row">
+    <div class="four columns offset-by-four">
+      <h1 id="mf-timer">0:00</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns offset-by-three">
       <table>
         <tr>
-          <td>&nbsp;</td><td align="right" id="mf-number1">0</td>
-        </tr><tr>
-          <td id="mf-operation">+</td><td align="right" id="mf-number2">0</td>
+          <td>&nbsp;</td><td><h2 style="text-align:right;" id="mf-number1">0</h2></td>
+        </tr><tr style="border-bottom:2px solid #000000">
+          <td><h2 id="mf-operation">+</h2></td><td><h2 style="text-align:right;" id="mf-number2">0</h2></td>
         </tr><tr>
           <td>&nbsp;</td>
-          <td align="right">
-              <input style="text-align:right;" class="form-control" id="mf-answer" disabled>
+          <td>
+            <h2><input size=3 style="text-align:right;" class="form-control" id="mf-answer" disabled></h2>
           </td>
         </tr>
       </table>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div id="mf-stats" class="col">
-      Number Correct: 0
+  <div class="row">
+    <div class="six columns offset-by-three">
+      <h3 id="mf-stats">Number Correct: 0</h3>
     </div>
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script src="arithmetic-ui.js"></script>
 </body>
 </html>
